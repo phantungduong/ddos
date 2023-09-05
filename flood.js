@@ -265,7 +265,7 @@ let randomHeaders = headerGenerator.getHeaders();
 
  const Socker = new NetSocket();
  headers[":method"] = "GET";
- headers[":path"] = parsedTarget.path + "?" + randstr(6) + "=" + randstr(100); 
+ headers[":path"] = parsedTarget.path; 
  headers[":scheme"] = "https";
  headers["x-forwarded-proto"] = "https";
  headers["accept"] = accept;
@@ -365,7 +365,7 @@ let randomHeaders = headerGenerator.getHeaders();
     
                     request.end();
                 }
-            }, 1000); 
+            }, 500); 
          });
  
          client.on("close", () => {
