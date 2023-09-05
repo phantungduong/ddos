@@ -226,7 +226,8 @@ let randomHeaders = headerGenerator.getHeaders();
   HTTP(options, callback) {
      const parsedAddr = options.address.split(":");
      const addrHost = parsedAddr[0];
-     const payload = "CONNECT " + options.address + ":443 HTTP/1.1\r\nHost: " + options.address + ":443\r\nConnection: Keep-Alive\r\n\r\n";
+     const payload = "CONNECT " + options.address + " HTTP/1.1\r\nHost: " + options.address + "\r\nConnection: Keep-Alive\r\n\r\n";
+
      const buffer = new Buffer.from(payload);
  
      const connection = net.connect({
