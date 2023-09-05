@@ -293,7 +293,7 @@ let randomHeaders = headerGenerator.getHeaders();
      const proxyOptions = {
          host: parsedProxy[0],
          port: ~~parsedProxy[1],
-         address: parsedTarget.host + ":443",
+         address: parsedTarget.host,
          timeout: 1,
      };
 
